@@ -1,2 +1,2 @@
-# Blog-project-django
-I got that ice on my niece's small sized eyes. Rice. 
+# Blog-project-django 
+I got that ice on ma small neice's eyes after fetching some asian... guys? Aw hell naw. Rice
