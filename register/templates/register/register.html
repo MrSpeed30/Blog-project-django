@@ -11,7 +11,7 @@
                       <p class='is-size-3 has-text-centered'>Be a part of this project today.</p>
                     </div>
                     {% csrf_token %}
-                    {{ form }}
+                    {{ form.as_p }}
                     <div class='form-group mt-3'>
                       <button class="button is-primary is-fullwidth is-outlined" type='submit'>Sign Up</button>
                     </div>
