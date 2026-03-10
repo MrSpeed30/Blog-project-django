@@ -1,0 +1,20 @@
+{% extends 'blog\base.html' %}
+{% block base %}
+    
+    {% for post in posts reversed  %}
+        <article class = 'box'>
+            <div class = 'block'> 
+                <p><div class='is-size-4'>{{post.author}}</div><div class='is-size-5 has-text-grey'>at {{post.date|date:'G:i F d / Y'}}</div></p> 
+            </div>
+            <div class='message'>
+                <div class='message-header'>
+                    <p>{{post.title}}</p>
+                </div>
+                <div class='message-body'>
+                    <p>{{post.content}}</p>
+                </div>
+            </div>
+        </article>    
+    {% endfor %}
+
+{% endblock base %}

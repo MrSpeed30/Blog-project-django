@@ -1,0 +1,59 @@
+{% load static%}
+<!Doctype html>
+<html>
+    <head>
+    <!-- Bsse code -->
+        {% if title %}
+            <title>Blog - {{title}}</title>
+        {% else %}
+            <title>Blog</title>
+        {% endif %}
+    <!-- Bulma css framework -->    
+        <link
+        rel='stylesheet'
+        href='https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css'>
+
+        <link rel='stylesheet', href={% static 'blog/main.css' %}>
+    </head>
+    <body>
+        <!-- !!  Navigation bar  !! -->
+        <header>
+            <nav class='navbar is-custom' role='navigation' aria-label='main navigation'>
+                <div class='navbar-brand'>
+                    <!-- Logo -->
+                    <a class='navbar-item' href={% url 'Blog_home'%}>
+                    <strong class='is-size-4'>MY APP</strong>
+                    </a>
+                    <!-- Mobile bar -->
+                    <a role='button' class='navbar-burger' data-target='navMenu'>
+                        <span></span><span></span><span></span><span></span>
+                    </a>
+                </div>
+                <div id='navMenu' class='navbar-menu'>
+                            
+                    <div class='navbar-start'>
+                            <a class='navbar-item' href={% url 'Blog_home'%}>Home</a>
+                            <a class='navbar-item' href={% url 'Blog_about'%}>About</a>
+                    </div>
+
+                <div class='navbar-end'>
+                        <div class='navbar-item'>
+                            <div class='buttons'>
+                            <a class='button has-text-grey-light' href=#>Log in</a>
+                            <a class='button has-text-grey-light' href=#>Sign up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </nav>
+        </header>
+        
+        <!-- main base -->
+        <dif section = 'container'>
+            <div class = 'column'>
+                {% block base %} {% endblock %}
+            </div>
+        </dif> 
+    </body>    
+</html>
