@@ -52,6 +52,15 @@
         <!-- main base -->
         <dif section = 'container'>
             <div class = 'column'>
+                {% if messages %}
+                    {%for message in messages%}
+                        <div class="notification is-primary">
+                            <button class="delete"></button>
+                            <p class='is-size-4'>{{message}}</p>
+                        </div>
+                    {% endfor %}
+                {%endif%}
+
                 {% block base %} {% endblock %}
             </div>
         </dif> 
